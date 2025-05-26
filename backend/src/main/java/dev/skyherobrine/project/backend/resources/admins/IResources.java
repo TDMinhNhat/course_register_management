@@ -8,5 +8,8 @@ public interface IResources<S, P> {
     ResponseEntity<Response> update(S s, P p);
     ResponseEntity<Response> delete(P p);
     ResponseEntity<Response> getAll();
+    ResponseEntity<Response> getALl(Integer page, Integer size);
+    ResponseEntity<Response> getAll(String sort, String order);
+    ResponseEntity<Response> getAll(Integer page, Integer size, String sort, String order);
     ResponseEntity<Response> getById(P p);
 }

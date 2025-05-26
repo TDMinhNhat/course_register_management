@@ -83,4 +83,19 @@ public class UserRoleResource implements IResources<UserRoleDTO, Long> {
                         .orElseThrow(() -> new EntityNotFoundException("User role not found with id: " + id))
         ));
     }
+
+    @Override
+    public ResponseEntity<Response> getALl(Integer page, Integer size) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<Response> getAll(String sort, String order) {
+        return null;
+    }
+
+    @Override
+    public ResponseEntity<Response> getAll(Integer page, Integer size, String sort, String order) {
+        return null;
+    }
 }
