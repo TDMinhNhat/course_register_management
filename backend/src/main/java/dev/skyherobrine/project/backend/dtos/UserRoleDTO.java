@@ -12,9 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor @AllArgsConstructor
 public class UserRoleDTO {
 
-    @NotBlank(message = "The role name can't be blank or empty")
     @Size(max = 100, message = "The role name maximum length is 100 characters")
-    @Pattern(regexp = "^[a-zA-Z_]+$", message = "The role name can only contain characters and underscores")
+    @Pattern(regexp = "^[a-zA-Z_]+$", message = "The role name must be contain characters, underscores and not empty of blank")
     private String roleName;
 
     @Size(max = 500, message = "The description maximum length is 500 characters")
