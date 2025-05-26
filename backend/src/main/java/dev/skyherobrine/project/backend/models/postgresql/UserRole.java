@@ -32,4 +32,9 @@ public class UserRole {
         this.createdAt = this.updatedAt = LocalDateTime.now();
         this.isActive = true;
     }
+
+    public UserRole(@NonNull String roleName, String description) {
+        this.roleName = roleName;
+        this.description = description;
+    }
 }
