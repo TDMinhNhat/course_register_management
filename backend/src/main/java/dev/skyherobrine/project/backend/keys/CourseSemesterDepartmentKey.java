@@ -1,6 +1,7 @@
 package dev.skyherobrine.project.backend.keys;
 
 import dev.skyherobrine.project.backend.models.postgresql.Course;
+import dev.skyherobrine.project.backend.models.postgresql.Department;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
@@ -21,4 +22,7 @@ public class CourseSemesterDepartmentKey implements Serializable {
 
     @ManyToOne @JoinColumn(name = "course_id", nullable = false)
     private Course course;
+
+    @ManyToOne @JoinColumn(name = "department_id", nullable = false)
+    private Department department;
 }
