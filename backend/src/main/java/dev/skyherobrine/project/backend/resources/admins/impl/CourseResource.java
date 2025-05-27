@@ -38,6 +38,19 @@ public class CourseResource implements IResources<CourseDTO,Long> {
         ));
     }
 
+    @PostMapping("/list")
+    public ResponseEntity<Response> addList(@Valid @RequestBody CourseDTO[] request) {
+        log.info("Admin Course: call the api add the list of courses");
+        for (CourseDTO courseDTO : request) {
+            courseService.addCourse(courseDTO);
+        }
+        return ResponseEntity.ok(new Response(
+                HttpStatus.CREATED.value(),
+                "Courses created successfully",
+                null
+        ));
+    }
+
     @Override
     public ResponseEntity<Response> update(CourseDTO courseDTO, Long aLong) {
         return null;
