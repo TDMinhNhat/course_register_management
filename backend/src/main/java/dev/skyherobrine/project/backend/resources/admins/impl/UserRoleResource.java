@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/admins/user_roles")
+@RequestMapping("/api/v1/admin/user_roles")
 @Slf4j
 public class UserRoleResource implements IResources<UserRoleDTO, Long> {
 

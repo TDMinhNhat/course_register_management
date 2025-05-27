@@ -86,7 +86,7 @@ public class UserResource implements IResources<UserDTO, Long> {
         return ResponseEntity.badRequest().body(new Response(
                 HttpStatus.BAD_REQUEST.value(),
                 "Page and size must be positive numbers",
-                userRepository.findAll(Pageable.ofSize(size).withPage(page))
+                userRepository.findAll(Pageable.ofSize(size).withPage(page - 1))
         ));
     }
 
@@ -124,7 +124,7 @@ public class UserResource implements IResources<UserDTO, Long> {
         return ResponseEntity.ok(new Response(
                 HttpStatus.OK.value(),
                 "Getting all users successfully with pagination and sorting",
-                userRepository.findAll(Pageable.ofSize(size).withPage(page).getSortOr(Sort.by(Sort.Direction.fromString(order), sort)))
+                userRepository.findAll(Pageable.ofSize(size).withPage(page - 1).getSortOr(Sort.by(Sort.Direction.fromString(order), sort)))
         ));
     }
 
