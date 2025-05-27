@@ -37,4 +37,10 @@ public class CoursePriority {
         this.createdAt = this.updatedAt = LocalDateTime.now();
         this.status = true;
     }
+
+    public CoursePriority(@NonNull CoursePriorityKey id, String description, @NonNull Department department) {
+        this.id = id;
+        this.description = description;
+        this.department = department;
+    }
 }
