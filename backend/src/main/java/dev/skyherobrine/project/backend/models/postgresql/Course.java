@@ -34,4 +34,11 @@ public class Course {
     private void onCreate() {
         this.createdAt = this.updatedAt = LocalDateTime.now();
     }
+
+    public Course(@NonNull String courseName, String description, @NonNull Integer credits, @NonNull Department department) {
+        this.courseName = courseName;
+        this.description = description;
+        this.credits = credits;
+        this.department = department;
+    }
 }
