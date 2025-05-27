@@ -4,6 +4,9 @@ import dev.skyherobrine.project.backend.models.postgresql.Department;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface DepartmentRepository extends PagingAndSortingRepository<Department,Long> {
+    Optional<Department> findById(Long id);
 }
