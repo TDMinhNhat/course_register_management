@@ -1,0 +1,15 @@
+{
+  "login_page": {
+    "title": "Login In",
+    "subtitle": "Please enter your credentials to access your account.",
+    "account": {
+      "label": "Account",
+      "placeholder": "Enter your email or password account"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password"
+    },
+    "error": "Your account or password is incorrect."
+  }
+}
