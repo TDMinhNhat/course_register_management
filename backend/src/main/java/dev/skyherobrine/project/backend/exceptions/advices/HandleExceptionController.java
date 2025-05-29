@@ -1,5 +1,6 @@
 package dev.skyherobrine.project.backend.exceptions.advices;
 
+import dev.skyherobrine.project.backend.exceptions.RequestParamException;
 import dev.skyherobrine.project.backend.models.Response;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
@@ -30,6 +31,16 @@ public class HandleExceptionController {
         return ResponseEntity.ok(new Response(
                 HttpStatus.BAD_REQUEST.value(),
                 "Can't find the requested entity to perform the operation",
+                e.getMessage()
+        ));
+    }
+
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(RequestParamException.class)
+    public ResponseEntity<Response> handleRequestParamException(RequestParamException e) {
+        return ResponseEntity.ok(new Response(
+                HttpStatus.BAD_REQUEST.value(),
+                "Request error with the parameters",
                 e.getMessage()
         ));
     }

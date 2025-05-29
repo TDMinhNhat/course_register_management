@@ -12,9 +12,11 @@ import java.time.LocalDateTime;
 public class Department {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false) @NonNull
-    private String name;
-    @Column(nullable = false) @NonNull
+    @Column(length = 50, nullable = false, unique = true) @NonNull
+    private String shortName;
+    @Column(length = 200, nullable = false, unique = true) @NonNull
+    private String fullName;
+    @Column(nullable = false)
     private boolean status;
     @Column(name = "created_at", nullable = false, updatable = false)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")

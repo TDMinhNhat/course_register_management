@@ -62,4 +62,17 @@ public class User {
         this.createdAt = this.updatedAt = LocalDateTime.now();
         this.status = UserStatus.ACTIVATED;
     }
+
+    public User(@NonNull String firstName, @NonNull String lastName, @NonNull Boolean sex, @NonNull LocalDate birthDate, String address, @NonNull String phone, @NonNull String email, @NonNull String password, @NonNull Department department, @NonNull UserRole role) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.sex = sex;
+        this.birthDate = birthDate;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.password = password;
+        this.department = department;
+        this.role = role;
+    }
 }
