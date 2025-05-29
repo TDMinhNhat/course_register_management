@@ -10,6 +10,14 @@
       "label": "Password",
       "placeholder": "Enter your password"
     },
-    "error": "Your account or password is incorrect."
+    "error": "Your account or password is incorrect.",
+    "reset_password": {
+      "label": "Forgot your password?",
+      "link": "Click here."
+    },
+    "button": {
+      "label": "Log In",
+      "loading": "Waiting for login..."
+    }
   }
 }
